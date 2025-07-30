@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 
-function Projects() {
-  const [projects, setProjects] = useState([]);
+export default function Projects() {
+  const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    // Pobranie listy repozytoriów z GitHub (publiczne)
-    fetch('https://api.github.com/users/ProjectsDev01/repos')
-      .then(response => response.json())
+    fetch('https://api.github.com/users/ProjectsDev01/repos?per_page=100')
+      .then(res => res.json())
       .then(data => {
-        // Przykładowe filtrowanie projektów
-        const relevant = data.filter(repo =>
-          repo.name.toLowerCase().includes('detector') ||
-          repo.name.toLowerCase().includes('segmentation')
-        );
-        setProjects(relevant);
-      })
-      .catch(err => console.error(err));
+        // sortuj po dacie ostatniego commita i filtruj prywatne, fork itp.
+        const filtered = data
+          .filter(r => !r.fork && r.stargazers_count > 0)
+          .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+        setRepos(filtered);
+      });
   }, []);
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Projekty</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map(project => (
-          <ProjectCard key={project.id} project={project} />
+      <h1 className="text-4xl font-bold mb-6 text-neonPrimary">Moje Projekty</h1>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {repos.map(repo => (
+          <ProjectCard key={repo.id} project={repo} />
         ))}
       </div>
     </div>
   );
 }
-
-export default Projects;

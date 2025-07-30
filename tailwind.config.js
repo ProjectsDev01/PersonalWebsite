@@ -1,12 +1,16 @@
 // tailwind.config.js
 module.exports = {
-  darkMode: 'class', // tryb ciemny sterowany klasą
+  darkMode: 'class',
   content: ['./src/**/*.{js,jsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
-        neon: '#4c1d95', // przykładowy kolor neonowy
+        neonPrimary: '#7f5af0',
+        neonAccent: '#d946ef',
       },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(135deg, #1f2937 0%, #111827 100%)',
+      }
     },
   },
   plugins: [],
