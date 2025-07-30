@@ -18,7 +18,7 @@ export default function Projects() {
 
   return (
     <div className="p-8">
-      <h1 className="text-4xl font-bold mb-6 text-neonPrimary">Moje Projekty</h1>
+      <h1 className="text-4xl font-bold mb-6 text-neonPrimary">My Projects</h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {repos.map(repo => (
           <ProjectCard key={repo.id} project={repo} />
