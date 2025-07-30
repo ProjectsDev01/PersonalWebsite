@@ -6,16 +6,16 @@ export default function Home() {
       data-aos="fade-down"
     >
       <h1 className="text-6xl font-extrabold mb-4 leading-tight text-neonPrimary">
-        Cześć, jestem Bartosz Golis
+        Hello, my name is Bartosz Golis
       </h1>
       <p className="text-xl text-gray-300 max-w-2xl mb-8">
-        DevOps & Automation Engineer | Python | Kubernetes | Docker
+        Junior NOC Operator
       </p>
       <a
         href="/o-mnie"
         className="px-8 py-3 bg-neonAccent rounded-full text-lg font-semibold animate-pulse hover:animate-none transition"
       >
-        Dowiedz się więcej
+        Learn more
       </a>
     </section>
   );
