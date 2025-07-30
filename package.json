@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/ProjectsDev01/PersonalWebsite/issues"
   },
-  "homepage": "https://<your-site>.netlify.app", 
+  "homepage": "https://golisbartosz.netlify.app", 
   "dependencies": {
     "aos": "^3.0.0",
     "react": "^18.2.0",
