@@ -14,15 +14,20 @@
     "type": "git",
     "url": "https://github.com/ProjectsDev01/PersonalWebsite.git"
   },
-  "keywords": ["react", "tailwindcss", "aos", "portfolio"],
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "aos",
+    "portfolio"
+  ],
   "author": "Bartosz Golis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ProjectsDev01/PersonalWebsite/issues"
   },
-  "homepage": "https://golisbartosz.netlify.app", 
+  "homepage": "https://golisbartosz.netlify.app",
   "dependencies": {
-    "aos": "^3.0.0",
+    "aos": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
@@ -32,5 +37,17 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
