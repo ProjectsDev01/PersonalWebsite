@@ -12,7 +12,7 @@ export default function Home() {
         Junior NOC Operator
       </p>
       <a
-        href="/o-mnie"
+        href="/about"
         className="px-8 py-3 bg-neonAccent rounded-full text-lg font-semibold animate-pulse hover:animate-none transition"
       >
         Learn more
